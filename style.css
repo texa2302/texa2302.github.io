@@ -152,6 +152,11 @@ width: 0;
 .hidden__buttons{
     display: none;
 }
+
+button:hover {
+    cursor: pointer;
+
+}
 @media ( min-width : 768px) and (max-width : 1119.98px){
     .middlegroup{
         display: flex;
@@ -219,6 +224,13 @@ width: 0;
     .title{
         display: flex;
         align-items: center;
+        padding-left: 30px;
+        border : 0 ;
+    }
+    .title h1{
+        border-left: 4px solid #41F6D7;
+        margin-left: -30px;
+        padding-left: 30px;
     }
     .hidden__buttons{
         display: flex;
@@ -251,9 +263,6 @@ width: 0;
         padding-left: 30px;
     }
     .firstblock__text{
-        padding-left: 30px;
-    }
-    .title{
         padding-left: 30px;
     }
 }
