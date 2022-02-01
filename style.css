@@ -234,30 +234,27 @@ button:hover {
     }
     .hidden__buttons{
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        margin-left: auto;
-        margin-top: auto;
-        margin-bottom: auto;
         min-width: 400px;
-
-    }
-    .hidden__buttons--repair, .hidden__buttons--checkstatus{
-        display: flex;
-        align-items: center;
-        
+        margin-left: auto;
+        margin-right: 20px;
     }
     .hidden__buttons button{
         border: 0;
         background-color: #F8F8F8;
-        margin-right: 32px;
         margin-left: 8px;
-
+        display: flex;
     }
+
     .hidden__buttons--repait--text, .hidden__buttons--checkstatus--text{
+        display: inline-block;
+        justify-content: center;
+        align-self: center;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
+        margin-right: 8px;
     }
     .sidemenu{
         padding-left: 30px;
