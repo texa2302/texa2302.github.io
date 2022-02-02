@@ -255,7 +255,7 @@ button:hover {
         margin-top: 28px;
         background-color: #EAEAEA;
     }
-    .logo{
+    .header__icon .logo{
         margin-left: 20px;
     }
 }
