@@ -334,20 +334,33 @@ height: 55px;
 .brandsRepair__list__readmore{
     display: none;
 }
-
+.brandsRepair__list__grid{
+    display: none;
+}
 @media ( min-width : 768px){
+    .brandsRepair__list{
+        display: none;
+    }
+
+    .brandsRepair__list__limiter{
+        display: none;
+    }
     .brandsRepair__list__readmore{
         display: block;
     }
-    .swiper-wrapper{
+    .brandsRepair__list__grid{
+        display: block;
+    }
+
+    .brandsRepair__list__grid__content{
         display: grid;
-        grid-template-columns: 240px 240px 240px 240px;
-        grid-gap: 32px 16px;
+        grid-template-columns: 224px 224px 224px;
+        grid-gap: 32px 32px;
         justify-content: center;
         padding-top: 24px;
     }
 
-    .swiper-wrapper button{
+    .brandsRepair__list__grid__content button{
         width: 240px;
         height: 72px;
         display: flex;
@@ -357,34 +370,35 @@ height: 55px;
         background-color: white;
     }
 
-    .brandsRepair__list__content button img:nth-child(2){
+    .brandsRepair__list__grid__content button img:nth-child(2){
         margin-left: auto;
     }
 
-    .brandsRepair__list__limiter{
+    .brandsRepair__list__grid__limiter{
         max-height: 200px;
         overflow: hidden;
         position: relative;
     }
 
-    .brandsRepair__list__readmore{
+    .brandsRepair__list__grid__readmore{
         opacity: 0;
         position: absolute;
     }
-    .brandsRepair__list__readmore:checked ~ .brandsRepair__list__limiter{
+    .brandsRepair__list__grid__readmore:checked 
+    ~ .brandsRepair__list__grid__limiter{
         max-height: none;
     }
 
-    .brandsRepair__list__readmore 
-    ~ .brandsRepair__list__readmore__button::before{
+    .brandsRepair__list__grid__readmore 
+    ~ .brandsRepair__list__grid__readmore__button::before{
         content: "»  Показать все";
         position: absolute;
         left: 80px;
         padding-top: 20px;
     }
 
-    .brandsRepair__list__readmore:checked 
-    ~ .brandsRepair__list__readmore__button::before{
+    .brandsRepair__list__grid__readmore:checked 
+    ~ .brandsRepair__list__grid__readmore__button::before{
         content: "«  Скрыть";
         position: absolute;
         left: 80px;
@@ -503,4 +517,12 @@ height: 55px;
     .firstblock__text{
         padding-left: 30px;
     }
+    .brandsRepair__list__grid__content{
+        display: grid;
+        grid-template-columns: 240px 240px 240px 240px;
+        grid-gap: 32px 16px;
+        justify-content: center;
+        padding-top: 24px;
+    }
+
 }
