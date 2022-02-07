@@ -336,6 +336,7 @@ height: 55px;
     content: "»  Показать все";
     position: absolute;
     left: 80px;
+    padding-top: 20px;
 }
 
 .brandsRepair__list__readmore:checked 
@@ -343,7 +344,7 @@ height: 55px;
     content: "«  Скрыть";
     position: absolute;
     left: 80px;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 
