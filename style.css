@@ -48,8 +48,6 @@
     margin-right:10px ;    
 }
 
-
-
 .header__body img{
     background-color: white;
 }
@@ -155,8 +153,129 @@ width: 0;
 
 button:hover {
     cursor: pointer;
-
 }
+
+.dropMenu{
+    background-color: white;
+}
+
+.dropMenu__header{
+    width: 320px;
+    max-width: 320px;
+    display:flex;
+    padding: 20px 24px;
+    padding-bottom: 34px;
+    box-sizing: border-box;
+}
+
+.dropMenu__header__close {
+    padding-right: 20px;
+}
+
+.dropMenu__header__search{
+    margin-left: auto;
+}
+
+.dropMenu__main li{
+    padding: 16px 24px;
+    list-style: none;
+}
+
+.dropMenu a{
+    text-decoration: none;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: bold;
+}
+
+.dropMenu__main li a{
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.fix::before{
+    content: "";
+    height: 32px;
+    width: 4px;
+    background-color: #41F6D7;
+    position: absolute;
+    left:-3px;
+    top: 155px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.dropMenu__main li a::before{
+    position: absolute;
+    color: #1B1C21;
+    content: attr(data-hover);
+    transition: transform 0.3s, opacity 0.3s;
+}
+.dropMenu__main li  .dropMenu__main__grey::before{
+    color: #7E7E82;
+}
+
+.dropMenu__main li a:hover::before{
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.dropMenu__footer{
+    padding-top: 100px;
+}
+
+.dropMenu__footer__contact__icons.middlegroup{
+    display: flex;
+    height: 60px;
+}
+.dropMenu__footer__contact__icons button{
+    border: 0;
+    background-color: white;
+}
+
+.dropMenu__footer__contact__icons__phone{
+    padding-left: 18px;
+}
+
+.dropMenu__footer__contact__email{
+    padding: 4px 24px ;
+}
+.dropMenu__footer__contact__telephone{
+    padding: 8px 24px;
+}
+
+.dropMenu__footer__contact__telephone a{
+    font-family: TT Lakes;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+}
+
+.dropMenu__footer__lang{
+    display: flex;
+    padding:  32px 24px;
+}
+.dropMenu__footer__lang button{
+    background-color: white;
+    border: 0;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: TT Lakes;
+}
+.dropMenu__footer__lang__RU__button.grey{
+    color: #7E7E82;
+}
+
+.sepia__filter img:hover{
+    filter: sepia(1);
+    transition-duration: 0.2s;
+}
+
 @media ( min-width : 768px) and (max-width : 1119.98px){
     .middlegroup{
         display: flex;
@@ -190,7 +309,7 @@ button:hover {
         margin-top: 28px;
         background-color: #EAEAEA;
     }
-    .logo{
+    .header__icon .logo{
         margin-left: 20px;
     }
 }
