@@ -276,14 +276,16 @@ button:hover {
     transition-duration: 0.2s;
 }
 
-.brandsRepair__title {
+.brandsRepair__title,
+.devicesRepair__title  {
 background: linear-gradient(90deg ,#F8F8F8 50%, #FFFFFF );
 border-top: 1px solid #D9FFF5;
 height: 55px;
 }
 
 
-.brandsRepair__title h2{
+.brandsRepair__title h2,
+.devicesRepair__title h2 {
     padding-left: 32px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -293,6 +295,10 @@ height: 55px;
     font-size: 16px;
     line-height: 24px;
     color: #7E7E82;
+}
+
+.devicesRepair{
+    padding-top: 30px;
 }
 
 .swiper {
@@ -321,38 +327,69 @@ height: 55px;
     background-color: white;
     border: 0;
     padding: 16px;
+    position: relative;
   }
+
+  .devicesRepair__list__content .swiper-slide button{
+      height: 160px;
+  }
+
+  .devicesRepair__list__content .swiper-slide h6{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .devicesRepair__list__content .swiper-slide img{
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+  }
+
   .swiper-slide button img:nth-child(2){
       margin-left: auto;
   }
 
 .swiper-pagination{
     position: absolute;
-    top: 55px;
+    margin-bottom: -15px;
 }
 
-.brandsRepair__list__readmore{
+.brandsRepair__list__readmore,
+.brandsRepair__list__grid,
+.devicesRepair__list__grid,
+.devicesRepair__list__grid__readmore{
     display: none;
 }
-.brandsRepair__list__grid{
-    display: none;
+
+.brandsRepair__list,
+.devicesRepair__list{
+    padding-top: 20px;
 }
+
+
 @media ( min-width : 768px){
-    .brandsRepair__list{
+    .devicesRepair{
+        padding-top: 60px;
+    }
+    .brandsRepair__list,
+    .brandsRepair__list__limiter,
+    .devicesRepair__list__limiter,
+    .devicesRepair__list{
         display: none;
     }
 
-    .brandsRepair__list__limiter{
-        display: none;
-    }
-    .brandsRepair__list__readmore{
-        display: block;
-    }
-    .brandsRepair__list__grid{
+    .brandsRepair__list__readmore,
+    .brandsRepair__list__grid,
+    .devicesRepair__list__grid{
         display: block;
     }
 
-    .brandsRepair__list__grid__content{
+
+    .brandsRepair__list__grid__content,
+    .devicesRepair__list__grid__content{
         display: grid;
         grid-template-columns: 224px 224px 224px;
         grid-gap: 32px 32px;
@@ -360,7 +397,16 @@ height: 55px;
         padding-top: 24px;
     }
 
-    .brandsRepair__list__grid__content button{
+    .devicesRepair__list__grid__content h6{
+        position: absolute;
+        font-size: 16px;
+        margin: 0;
+        top: 16px;
+        left: 16px;
+    }
+
+    .brandsRepair__list__grid__content button,
+    .devicesRepair__list__grid__content button{
         width: 240px;
         height: 72px;
         display: flex;
@@ -370,27 +416,46 @@ height: 55px;
         background-color: white;
     }
 
+    .devicesRepair__list__grid__content button{
+        width: 224px;
+        height: 160px;
+        display: flex;
+        position: relative;
+    }
+
+    .devicesRepair__list__grid__content img{
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+
     .brandsRepair__list__grid__content button img:nth-child(2){
         margin-left: auto;
     }
 
-    .brandsRepair__list__grid__limiter{
+    .brandsRepair__list__grid__limiter,
+    .devicesRepair__list__grid__limiter{
         max-height: 200px;
         overflow: hidden;
         position: relative;
     }
 
-    .brandsRepair__list__grid__readmore{
+    .brandsRepair__list__grid__readmore,
+    .devicesRepair__list__grid__readmore{
         opacity: 0;
         position: absolute;
     }
     .brandsRepair__list__grid__readmore:checked 
-    ~ .brandsRepair__list__grid__limiter{
+    ~ .brandsRepair__list__grid__limiter,
+    .devicesRepair__list__grid__readmore:checked 
+    ~ .devicesRepair__list__grid__limiter{
         max-height: none;
     }
 
     .brandsRepair__list__grid__readmore 
-    ~ .brandsRepair__list__grid__readmore__button::before{
+    ~ .brandsRepair__list__grid__readmore__button::before,
+    .devicesRepair__list__grid__readmore 
+    ~ .devicesRepair__list__grid__readmore__button::before{
         content: "»  Показать все";
         position: absolute;
         left: 80px;
@@ -398,7 +463,9 @@ height: 55px;
     }
 
     .brandsRepair__list__grid__readmore:checked 
-    ~ .brandsRepair__list__grid__readmore__button::before{
+    ~ .brandsRepair__list__grid__readmore__button::before,
+    .devicesRepair__list__grid__readmore:checked 
+    ~ .devicesRepair__list__grid__readmore__button::before{
         content: "«  Скрыть";
         position: absolute;
         left: 80px;
@@ -502,7 +569,8 @@ height: 55px;
         display: flex;
     }
 
-    .hidden__buttons--repait--text, .hidden__buttons--checkstatus--text{
+    .hidden__buttons--repait--text, 
+    .hidden__buttons--checkstatus--text{
         display: inline-block;
         justify-content: center;
         align-self: center;
@@ -517,7 +585,8 @@ height: 55px;
     .firstblock__text{
         padding-left: 30px;
     }
-    .brandsRepair__list__grid__content{
+    .brandsRepair__list__grid__content,
+    .devicesRepair__list__grid__content{
         display: grid;
         grid-template-columns: 240px 240px 240px 240px;
         grid-gap: 32px 16px;
