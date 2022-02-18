@@ -277,7 +277,8 @@ button:hover {
 }
 
 .brandsRepair__title,
-.devicesRepair__title  {
+.devicesRepair__title,
+.priceList__title  {
 background: linear-gradient(90deg ,#F8F8F8 50%, #FFFFFF );
 border-top: 1px solid #D9FFF5;
 height: 55px;
@@ -285,7 +286,8 @@ height: 55px;
 
 
 .brandsRepair__title h2,
-.devicesRepair__title h2 {
+.devicesRepair__title h2,
+.priceList__title h2 {
     padding-left: 32px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -300,11 +302,14 @@ height: 55px;
 .devicesRepair{
     padding-top: 30px;
 }
+.priceList{
+    padding-top: 50px;
+}
 
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
   .swiper-slide {
     text-align: center;
@@ -315,9 +320,9 @@ height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide button{
+    .swiper-slide button{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -328,11 +333,11 @@ height: 55px;
     border: 0;
     padding: 16px;
     position: relative;
-  }
+}
 
-  .devicesRepair__list__content .swiper-slide button{
+    .devicesRepair__list__content .swiper-slide button{
       height: 160px;
-  }
+}
 
   .devicesRepair__list__content .swiper-slide h6{
     position: absolute;
@@ -357,10 +362,56 @@ height: 55px;
     margin-bottom: -15px;
 }
 
+.priceList__list {
+    overflow: hidden;
+}
+
+.priceList__list .swiper-slide button{
+    width:auto;
+    height: auto;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+ }
+
+.priceList__list .swiper-slide__container{
+    position: relative;
+    background-color: white;
+    height: 200px;
+    width: 260px;
+    justify-content: flex-start;
+}
+
+.priceList__list .swiper-slide h6{
+    display: flex;
+    margin: 0;
+   width: 100%;
+   align-self: flex-start;
+   padding: 6px;
+   padding-left: 16px;
+   color: #7E7E82;
+   font-size: 14px;
+}
+
+.priceList__list .swiper-slide__container div{
+    display: flex;
+    align-self: flex-start;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    color: #1B1C21;
+}
+
+.priceList__list__content .swiper-pagination{
+    position: absolute; 
+    bottom: -310px;
+}
+
 .brandsRepair__list__readmore,
 .brandsRepair__list__grid,
 .devicesRepair__list__grid,
-.devicesRepair__list__grid__readmore{
+.devicesRepair__list__grid__readmore,
+.priceList__list__grid{
     display: none;
 }
 
@@ -369,7 +420,6 @@ height: 55px;
     padding-top: 20px;
 }
 
-
 @media ( min-width : 768px){
     .devicesRepair{
         padding-top: 60px;
@@ -377,7 +427,8 @@ height: 55px;
     .brandsRepair__list,
     .brandsRepair__list__limiter,
     .devicesRepair__list__limiter,
-    .devicesRepair__list{
+    .devicesRepair__list,
+    .priceList__list{
         display: none;
     }
 
@@ -387,6 +438,51 @@ height: 55px;
         display: block;
     }
 
+    .priceList__list__grid{
+        display: grid;
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+        font-size: 14px;
+
+    }
+
+    .priceList__list__grid__container > div{
+        display: flex;
+        width: 100%;
+        height: 64px;
+        padding-left: 16px;
+        align-items: center;
+    }
+
+    .priceList__list__grid__container button{
+        align-self: flex-end;
+        margin-left: auto;
+        padding: 16px;
+        background-color: white;
+        border: 0;
+    }
+
+    .priceList__list__grid__header .hidden{
+        visibility: hidden;
+    }
+
+    .priceList__list__grid__container .firstCol{
+        min-width: 350px;
+    }
+
+     .priceList__list__grid__container .secondCol{
+        min-width: 90px;
+        margin: auto;   
+    }   
+
+    .priceList__list__grid__container img{
+        padding-right: 16px;
+    }
+
+    .priceList__list__grid__container > div:not(:nth-child(1)){
+        background-color: white;
+    }
 
     .brandsRepair__list__grid__content,
     .devicesRepair__list__grid__content{
