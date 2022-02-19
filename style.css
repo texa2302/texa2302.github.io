@@ -18,6 +18,9 @@
     font-weight: 800;
     font-style: normal;
 }
+body.lock{
+    overflow: hidden;
+}
 .header__body{
     display: flex;
     justify-content: space-between;
@@ -155,8 +158,30 @@ button:hover {
     cursor: pointer;
 }
 
-.dropMenu{
+
+.blur{
+    filter: blur(3px);
+    transition: 0.8s;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
     background-color: white;
+    min-height: 100%;
+}
+
+.popup.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup.open .popup__content{
+    transform: translate(0px, 0%) rotateX(0deg);
 }
 
 .dropMenu__header{
@@ -170,6 +195,7 @@ button:hover {
 
 .dropMenu__header__close {
     padding-right: 20px;
+    padding-top: 10px;
 }
 
 .dropMenu__header__search{
@@ -420,6 +446,50 @@ height: 55px;
     padding-top: 20px;
 }
 
+.priceList__footer__caption{
+    padding-top: 35px;
+    max-width: 290px;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.priceList__footer__advertisment{
+    padding-left: 16px;
+    height: 24px;
+    align-self: center;
+    display: flex;
+    text-decoration: none;
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2 px;
+    font-weight: 700;
+}
+
+.footer{
+    border-top: 1px solid #D9FFF5;
+    margin-top: 50px;
+    align-content: center;
+    font-size: 14px;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer div{
+    min-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 15px;
+    padding-top: 16px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
 @media ( min-width : 768px){
     .devicesRepair{
         padding-top: 60px;
@@ -495,6 +565,29 @@ height: 55px;
 
     .priceList__list__grid__container > div:not(:nth-child(1)){
         background-color: white;
+    }
+
+    .priceList__footer__caption{
+        max-width: 430px;
+        padding: 24px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+        padding-bottom: 16px;
+    }
+
+    .priceList__footer__advertisment{
+        padding-left: 24px;
+        height: 24px;
+        align-self: center;
+        display: flex;
+        text-decoration: none;
+        color: #1B1C21;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2 px;
+        font-weight: 700;
     }
 
     .brandsRepair__list__grid__content,
@@ -581,6 +674,22 @@ height: 55px;
         padding-top: 20px;
     }
 }
+.footer{
+    flex-wrap: nowrap;
+    min-width: 0;
+    padding-top: 32px;
+    justify-content: space-between;
+}
+.footer:nth-child(3){
+    max-width: 330px;
+    min-width: 0;
+}
+.footer div{
+    max-width: 230px;
+    min-width: 0;
+    margin: 0;
+    padding-bottom: 20px;
+}
 
 @media ( min-width : 768px) and (max-width : 1119.98px){
     .middlegroup{
@@ -612,7 +721,6 @@ height: 55px;
         height: 32px;
         width: 2px;
         position: absolute;
-        margin-top: 28px;
         background-color: #EAEAEA;
     }
     .header__icon .logo{
