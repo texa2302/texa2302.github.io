@@ -69,6 +69,10 @@ body.lock{
     
 }
 
+.header__call{
+    padding-right: 8px;
+}
+
 body {
     background-color: #F8F8F8;
     margin: 0;
@@ -166,22 +170,21 @@ button:hover {
 .popup{
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 11;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.8s ease 0s;
+    transition: all ease 0s;
     background-color: white;
     min-height: 100%;
 }
 
-.popup.open{
-    visibility: visible;
-    opacity: 1;
+.popupLs{
+    left: 0;
 }
 
-.popup.open .popup__content{
-    transform: translate(0px, 0%) rotateX(0deg);
+.open{
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropMenu__header{
@@ -265,7 +268,9 @@ button:hover {
 .dropMenu__footer__contact__icons__phone{
     padding-left: 18px;
 }
-
+.dropMenu__footer__contact__icons__phone a{ 
+    padding: 6px;
+}
 .dropMenu__footer__contact__email{
     padding: 4px 24px ;
 }
@@ -490,6 +495,105 @@ height: 55px;
     text-align: center;
 }
 
+.popupRs.open{
+    width: 320px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    min-height: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popupRs .popup{
+    right: 0;
+}
+
+.popupRs__content{
+    position: relative;
+    right: 0;
+}
+.popupRs.open{
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+
+}
+.popupRs__content__header{
+    padding-top:60px;
+}
+.popupRs__content__header a,
+.modalCall__content__header a{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+}
+
+.popupRs__content__header__text,
+.modalCall__content__header__text{
+    border-left: 4px solid #41F6D7;
+    padding-left: 12px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+}
+.popupRs__content__main textarea{
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    resize: none;
+    margin: 8px;
+    height: 118px;
+}
+
+.popupRs__content__main input,
+.modalCall__body input{
+    width: 288px;
+    height: 48px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+}
+
+.popupRs__content__main__license{
+    width: 288px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.popupRs__content__main__license a,
+.modalCall__body__text a{ 
+    text-decoration: none;
+    color: #FF3E79;
+}
+.popupRs__content__main__submit{
+    border: 0;
+    background-color: white;
+    display: flex;
+    margin-left: auto;
+    padding: 16px;
+}
+
+.modalCall{
+    max-width: 320px;
+    background-color: white;
+}
+
+.modalCall__content__header{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.modalCall__header__content{
+    position: relative;
+}
+.modalCall__body__text{
+    max-width: 288px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
 @media ( min-width : 768px){
     .devicesRepair{
         padding-top: 60px;
@@ -523,6 +627,7 @@ height: 55px;
         height: 64px;
         padding-left: 16px;
         align-items: center;
+        position: relative;
     }
 
     .priceList__list__grid__container > 
@@ -533,7 +638,7 @@ height: 55px;
         margin-bottom: 70px;
         padding-right: 40px;
         padding-left: 40px;
-        width: 90%;
+        width: 95%;
         
         border-top: 1px solid black;
     }
@@ -811,4 +916,24 @@ height: 55px;
         padding-top: 24px;
     }
 
+}
+@media (min-width: 1376px){
+    .wrapper{
+        margin-left: 320px;
+    }
+    .dropMenu{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .popupLs{
+        visibility: visible;
+        opacity: 1;
+    }
+    .dropMenu__header__close{
+        visibility: hidden;
+    }
+    .dropMenu__header__logo{
+        position: absolute;
+    }
 }

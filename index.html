@@ -32,14 +32,14 @@
                 </div>
                 <div class="middlegroup">
                     <div class="header__call">
-                        <button class="header__call--button">
-                            <img src="images/call.png" alt="call">
-                        </button>
+                        <a href="#mCall" class="header__call--button popup-link">
+                            <img src="images/call.png" alt="call" class="popup-link">
+                        </a>
                     </div>
                     <div class="header__chat">
-                        <button class="header__chat--button">
-                            <img src="images/chat.png" alt="chat">
-                        </button>
+                        <a href="#popupRs" class="header__chat--button popup-link">
+                            <img src="images/chat.png" alt="chat" class="popup-link">
+                        </a>
                     </div>
                     <div class="header__profile">
                         <button class="header__profile--button">
@@ -480,7 +480,7 @@
     </div>
     <!--**********************POPUP**********************-->
     <section class="dropMenu">
-        <div class="popup" id="popup">
+        <div class="popupLs popup" id="popup">
             <div class="popup__content">
                 <div class="dropMenu__header">
                     <div class="dropMenu__header__close close-popup header__body sepia__filter">
@@ -520,14 +520,14 @@
                     <div class="dropMenu__footer__contact ">
                         <div class="dropMenu__footer__contact__icons middlegroup">
                             <div class="dropMenu__footer__contact__icons__phone sepia__filter">
-                                <button class="dropMenu__footer__contact__icons__phone__button">
-                                    <img src="images/call.png" alt="call">
-                                </button>
+                                <a href="#mCall" class="dropMenu__footer__contact__icons__phone__button popup-link">
+                                    <img src="images/call.png" alt="call" class="popup-link"> 
+                                </a>
                             </div>
                             <div class="dropMenu__footer__contact__icons__chat sepia__filter">
-                                <button class="dropMenu__footer__contact__icons__chat__button">
+                                <a href="#popupRs" class="dropMenu__footer__contact__icons__chat__button popup-link">
                                     <img src="images/chat.png" alt="chat">
-                                </button>
+                                </a>
                             </div>
                             <div class="dropMenu__footer__contact__icons__contacts sepia__filter">
                                 <button class="dropMenu__footer__contact__icons__contacts__button">
@@ -557,7 +557,71 @@
             </div>
         </div>
     </section>
-    <!--*************************************************-->
+    <!--******************ANOTHER_ONE*******************-->
+    <section class="modalFeedback">
+        <div class="popupRs popup" id="popupRs">
+            <div class="popupRs__content">
+                <div class="popupRs__content__header">
+                    <div class="popupRs__content__header sepia__filter">
+                        <a href="" class="popupRs__content__header__closeButton">
+                            <img src="images/close.png" alt="close">
+                        </a>
+                    </div>
+                    <h2 class="popupRs__content__header__text">Обратная связь</h2>
+                </div>
+                <form action="">
+                    <div class="popupRs__content__main">
+                        <div class="popupRs__content__main__name">
+                            <input type="text" placeholder="Имя">
+                        </div>
+                        <div class="popupRs__content__main__phone">
+                            <input type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="popupRs__content__main__email">
+                            <input type="email" name="mailid" id="email" placeholder="Электронная почта">
+                        </div>
+                        <div class="popupRs__content__main__message">
+                            <textarea name="message" id="" cols="37" rows="4" placeholder="Сообщение"></textarea>
+                        </div>
+                        <div class="popupRs__content__main__license">
+                            Нажимая “отправить”, вы даете согласие на 
+                            <a href="">обработку персональных данных</a>и соглашаетесь с нашей 
+                            <a href=""> политикой конфиденциальности</a>
+                        </div>
+                        <button class="popupRs__content__main__submit sepia__filter">
+                            <img src="/images/submit.png" alt="submit">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--******************AND_ANOTHER_ONE**********************-->
+    <section class="modalCall">
+        <div class="modalCall__wrapper popup popupRs" id="mCall">
+            <div class="modalCall__header__content">
+                <div class="modalCall__content__header">
+                    <a href="" class="modalCall__header__closeButton">
+                        <img src="images/close.png" alt="close">
+                    </a>
+                    <div class="modalCall__content__header__text">Заказать звонок</div>
+                </div>
+                <div class="modalCall__body">
+                    <input type="tel" placeholder="Телефон">
+                    <div class="modalCall__body__text">Нажимая “отправить”, вы даете согласие на
+                        <a href=""> обработку персональных данных и</a>соглашаетесь с нашей
+                        <a href=""> политикой конфиденциальности </a>
+                    </div>
+                    <button class="popupRs__content__main__submit sepia__filter">
+                        <img src="/images/submit.png" alt="submit">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--*******************************************************-->
+
+
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
