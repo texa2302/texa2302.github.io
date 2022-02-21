@@ -36,7 +36,7 @@ function popupOpen(currentPopup) {
                 if (!e.target.closest('.popup')) {
                     popupClose(currentPopup);
                 }
-                //e.preventDefault(); обновление страницы на крестик
+                e.preventDefault(); //обновление страницы на крестик
             }
         });
        // popupClose(popAct);
