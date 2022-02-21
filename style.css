@@ -750,7 +750,7 @@ height: 55px;
     .brandsRepair__list__grid__readmore,
     .devicesRepair__list__grid__readmore{
         opacity: 0;
-        position: absolute;
+        position: relative;
     }
     .brandsRepair__list__grid__readmore:checked 
     ~ .brandsRepair__list__grid__limiter,
@@ -765,8 +765,8 @@ height: 55px;
     ~ .devicesRepair__list__grid__readmore__button::before{
         content: "»  Показать все";
         position: absolute;
-        left: 80px;
         padding-top: 20px;
+        padding-left: 100px;
     }
 
     .brandsRepair__list__grid__readmore:checked 
@@ -775,8 +775,8 @@ height: 55px;
     ~ .devicesRepair__list__grid__readmore__button::before{
         content: "«  Скрыть";
         position: absolute;
-        left: 80px;
         padding-top: 20px;
+        padding-left: 100px;
     }
 }
 .footer{
